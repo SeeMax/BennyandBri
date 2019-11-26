@@ -1,0 +1,23 @@
+@import "colors";
+
+.page-border {
+  stroke:$red1;
+  x:12px;
+  y:12px;
+  width:calc(100% - 24px);
+  height:calc(100% - 24px);
+  filter:url('#page-border');
+  fill:none;
+  stroke-width:8px;
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+}

@@ -1,0 +1,84 @@
+@import "colors";
+
+.page-home {
+  background: #f6ecd3;
+
+  svg {
+    overflow: visible;
+  }
+}
+
+.hero-section {
+
+  .headline-block {
+  	margin-bottom: 100px;
+  }
+
+  .flower-patch {
+    width:180px;
+    height:auto;
+    transform: translate(17px, -16px);
+  }
+
+  .flower-patch-two {
+    transform: translate(-27px, -14px);
+  }
+
+  .text-half {
+    padding: 0px 0px 0px 40px;
+  }
+
+  .image-half {
+
+  }
+
+}
+
+
+
+.who-section {
+
+}
+
+.tumbleweed-one {
+  width:80px;
+  height:auto;
+}
+
+.tumbleweed-one-shadow {
+  width:100px;
+  height:auto;
+  opacity:0.2;
+}
+
+.tumbleweed-path-one-svg, .tumbleweed-shadow-path-one-svg {
+  position: absolute;
+  bottom:50px;
+  left:-10%;
+  width:120%;
+  height:auto;
+  visibility: hidden;
+}
+
+.hotel-svg-container {
+  position: relative;
+  width:80%;
+  height:auto;
+  margin:0 auto;
+}
+
+.hotel-svg {
+
+}
+
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+}
+
+
+// 767px And Below
+@media screen and (max-width: 767px){
+
+}
