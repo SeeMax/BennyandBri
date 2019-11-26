@@ -5,6 +5,8 @@
 			<?php while( have_rows('hero_section') ): the_row();?>
 				<section class="hero-section">
 					<?php get_template_part( 'partials/_shirt-pattern-two' ); ?>
+					<?php get_template_part( 'partials/_hotel-svg' ); ?>
+
 					<div class="content">
 		        <?php
 							$title = get_sub_field('title');

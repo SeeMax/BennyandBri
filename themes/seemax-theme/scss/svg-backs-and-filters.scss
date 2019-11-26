@@ -2,10 +2,10 @@
 
 .page-border {
   stroke:$red1;
-  x:12px;
-  y:12px;
-  width:calc(100% - 24px);
-  height:calc(100% - 24px);
+  x:15px;
+  y:15px;
+  width:calc(100% - 30px);
+  height:calc(100% - 30px);
   filter:url('#page-border');
   fill:none;
   stroke-width:8px;

@@ -1014,6 +1014,24 @@ hr {
   .page-home svg {
     overflow: visible; }
 
+.hotel-svg-container {
+  opacity: .5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 70%;
+  height: auto; }
+
+.hotel-svg .hotel-svg-outlines, .hotel-svg path {
+  fill: none;
+  stroke: #e5d57e;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10; }
+
 .hero-section .headline-block {
   margin-bottom: 100px; }
 
@@ -1046,12 +1064,6 @@ hr {
   width: 120%;
   height: auto;
   visibility: hidden; }
-
-.hotel-svg-container {
-  position: relative;
-  width: 80%;
-  height: auto;
-  margin: 0 auto; }
 
 #preloader {
   position: fixed;
@@ -1115,10 +1127,10 @@ hr {
 
 .page-border {
   stroke: #c5302a;
-  x: 12px;
-  y: 12px;
-  width: calc(100% - 24px);
-  height: calc(100% - 24px);
+  x: 15px;
+  y: 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
   -webkit-filter: url("#page-border");
           filter: url("#page-border");
   fill: none;

@@ -8,6 +8,30 @@
   }
 }
 
+.hotel-svg-container {
+  opacity: .5;
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  margin:0 auto;
+  width:70%;
+  height:auto;
+}
+
+.hotel-svg {
+
+  .hotel-svg-outlines, path {
+    fill:none;
+    stroke:$shirtYellow;
+    stroke-width:1;
+    stroke-linecap:
+    round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+  }
+}
+
 .hero-section {
 
   .headline-block {
@@ -58,17 +82,6 @@
   width:120%;
   height:auto;
   visibility: hidden;
-}
-
-.hotel-svg-container {
-  position: relative;
-  width:80%;
-  height:auto;
-  margin:0 auto;
-}
-
-.hotel-svg {
-
 }
 
 
