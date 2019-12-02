@@ -4,9 +4,7 @@
 		<?php if( have_rows('hero_section') ): ?>
 			<?php while( have_rows('hero_section') ): the_row();?>
 				<section class="hero-section">
-					<?php get_template_part( 'partials/_shirt-pattern-two' ); ?>
-					<?php get_template_part( 'partials/_hotel-svg' ); ?>
-
+					<?php get_template_part( 'partials/_shirt-pattern-one' ); ?>
 					<div class="content">
 		        <?php
 							$title = get_sub_field('title');
@@ -14,9 +12,10 @@
 							$image = get_sub_field('image');
 		    		?>
 						<div class="headline-block">
-							<img class="flower-patch" src="<?php echo get_template_directory_uri();?>/img/flower-patch.svg" >
-							<h1><?php echo $title;?></h1>
-							<img class="flower-patch flower-patch-two" src="<?php echo get_template_directory_uri();?>/img/flower-patch-two.svg" >
+							<img class="flower-patch" src="<?php echo get_template_directory_uri();?>/img/full-flower-left.svg" >
+							<img class="site-title" src="<?php echo get_template_directory_uri();?>/img/site-title.svg">
+							<img class="flower-patch flower-patch-two" src="<?php echo get_template_directory_uri();?>/img/full-flower-right.svg" >
+
 						</div>
 						<div class="image-half c-width-50">
 							<img src="<?php echo $image[url];?>"/>
@@ -38,9 +37,7 @@
 							$image = get_sub_field('image');
 		    		?>
 						<div class="headline-block">
-							<img class="flower-patch" src="<?php echo get_template_directory_uri();?>/img/flower-patch.svg" >
 							<h2><?php echo $title;?></h2>
-							<img class="flower-patch flower-patch-two" src="<?php echo get_template_directory_uri();?>/img/flower-patch-two.svg" >
 						</div>
 						<div class="text-half c-width-50">
 							<p><?php echo $body;?></p>

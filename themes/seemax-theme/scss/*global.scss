@@ -41,6 +41,10 @@ section {
 	padding:100px 55px;
 }
 
+.filter-svg {
+	height:0;
+}
+
 a {
 	color:red;
 	text-decoration:none;
@@ -64,10 +68,10 @@ h1, h2, h3, h4, h5 {
 	color:$flowerDarkGreen;
 	margin:0;
 	width:auto;
-	filter:url('#headline-stitch');
 }
 
 h1 {
+	filter:url('#headline-stitch');
 	text-align: center;
 	font-size:90px;
 	line-height: .9;

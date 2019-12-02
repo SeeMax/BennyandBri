@@ -30,7 +30,7 @@
 	<!-- <div id="preloader">
 		<img src="<?php echo get_template_directory_uri();?>/img/preloader.svg" >
 	</div> -->
-	<header class="header" role="banner">
+	<!-- <header class="header" role="banner">
 		<div class="content header-inner-wrap">
 			<div class="header-logo">
 				<a class="c-block-fill" href="/"></a>
@@ -53,5 +53,5 @@
 				<span class="hamBot"></span>
 			</div>
 		</div>
-	</header>
+	</header> -->
 	<?php get_template_part( 'partials/_svg-back-and-filters' ); ?>
