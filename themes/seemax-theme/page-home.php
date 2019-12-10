@@ -1,26 +1,31 @@
 <?php /* Template Name: Home */ get_header(); ?>
+<div class="main-site-border"></div>
+<div class="main-site-border main-site-border-2"></div>
+<div class="main-site-border main-site-border-2 main-site-border-flip"></div>
+<div class="main-site-border main-site-border-3"></div>
+<div class="main-site-border main-site-border-3 main-site-border-flip"></div>
+<div class="main-site-border main-site-border-4"></div>
 <main class="home-page">
 	<?php while (have_posts()) : the_post(); ?>
+		<div class="headline-block">
+			<?php get_template_part( 'partials/_shirt-pattern-three' ); ?>
+			<?php get_template_part( 'partials/_flower-patch-one' ); ?>
+			<?php get_template_part( 'partials/_site_title');?>
+			<?php get_template_part( 'partials/_flower-patch-two' ); ?>
+		</div>
 		<?php if( have_rows('hero_section') ): ?>
 			<?php while( have_rows('hero_section') ): the_row();?>
 				<section class="hero-section">
-					<?php get_template_part( 'partials/_shirt-pattern-one' ); ?>
 					<div class="content">
 		        <?php
 							$title = get_sub_field('title');
 		        	$body = get_sub_field('body');
 							$image = get_sub_field('image');
 		    		?>
-						<div class="headline-block">
-							<img class="flower-patch" src="<?php echo get_template_directory_uri();?>/img/full-flower-left.svg" >
-							<img class="site-title" src="<?php echo get_template_directory_uri();?>/img/site-title.svg">
-							<img class="flower-patch flower-patch-two" src="<?php echo get_template_directory_uri();?>/img/full-flower-right.svg" >
-
-						</div>
 						<div class="image-half c-width-50">
-							<img src="<?php echo $image[url];?>"/>
+							<!-- <img src="<?php echo $image[url];?>"/> -->
 						</div>
-						<div class="text-half c-width-50">
+						<div class="text-half c-width-100">
 							<p><?php echo $body;?></p>
 						</div>
 					</div>

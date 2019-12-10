@@ -18,6 +18,43 @@ body {
 	overflow: hidden;
 }
 
+
+.main-site-border {
+	opacity:.5;
+  position: absolute;
+	border: 1px dotted $flowerRed;
+	top:22px;
+  left:22px;
+  width:calc(100% - 44px);
+	height:calc(100% - 44px);
+}
+
+.main-site-border-flip {
+	transform: rotate(180deg);
+	opacity:0.25;
+}
+
+.main-site-border-2 {
+	top:23px;
+  left:23px;
+  width:calc(100% - 46px);
+	height:calc(100% - 46px);
+}
+
+.main-site-border-3 {
+	top:24px;
+  left:24px;
+  width:calc(100% - 48px);
+	height:calc(100% - 48px);
+}
+
+.main-site-border-4 {
+	top:25px;
+  left:25px;
+  width:calc(100% - 50px);
+	height:calc(100% - 50px);
+}
+
 main {
 	position: relative;
 	min-height: 100%;
@@ -71,7 +108,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-	filter:url('#headline-stitch');
+	// filter:url('#headline-stitch');
 	text-align: center;
 	font-size:90px;
 	line-height: .9;
@@ -148,16 +185,20 @@ hr {
   padding-right:40px;
 }
 
-.shirt-pattern-one, .shirt-pattern-two {
-	opacity:0.2;
+.shirt-pattern-one, .shirt-pattern-two, .shirt-pattern-three {
+	opacity:.25;
 	position: absolute;
-	top:22px;
+	top:0px;
   left:22px;
   width:calc(100% - 44px);
 	height:auto;
 
 	path {
-		fill:$shirtYellow;
+		// fill:$shirtYellow;
+		fill:#E5DBCA;
+		// stroke:$shirtYellow;
+		// stroke-width:.5;
+		// stroke-miterlimit:2;
 	}
 }
 
