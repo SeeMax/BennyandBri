@@ -1,29 +1,23 @@
 <?php /* Template Name: Home */ get_header(); ?>
-<div class="main-site-border"></div>
-<div class="main-site-border main-site-border-2"></div>
-<div class="main-site-border main-site-border-2 main-site-border-flip"></div>
-<div class="main-site-border main-site-border-3"></div>
-<div class="main-site-border main-site-border-3 main-site-border-flip"></div>
-<div class="main-site-border main-site-border-4"></div>
 <main class="home-page">
 	<?php while (have_posts()) : the_post(); ?>
 		<div class="headline-block">
-			<?php get_template_part( 'partials/_shirt-pattern-three' ); ?>
-			<?php get_template_part( 'partials/_flower-patch-one' ); ?>
-			<?php get_template_part( 'partials/_site_title');?>
-			<?php get_template_part( 'partials/_flower-patch-two' ); ?>
+			<?php get_template_part( 'partials/_site-title');?>
 		</div>
 		<?php if( have_rows('hero_section') ): ?>
 			<?php while( have_rows('hero_section') ): the_row();?>
-				<section class="hero-section">
+				<section class="hero-section border-tan">
+					<?php get_template_part( 'partials/_area-stitch-border' ); ?>
+					<?php get_template_part( 'partials/_tan-color-background' ); ?>
 					<div class="content">
 		        <?php
 							$title = get_sub_field('title');
 		        	$body = get_sub_field('body');
 							$image = get_sub_field('image');
 		    		?>
-						<div class="image-half c-width-50">
-							<!-- <img src="<?php echo $image[url];?>"/> -->
+						<div class="image-half c-width-100">
+							<h2><?php echo $title;?></h2>
+							<?php get_template_part( 'partials/_cactus-flower-full' ); ?>
 						</div>
 						<div class="text-half c-width-100">
 							<p><?php echo $body;?></p>
@@ -36,25 +30,27 @@
 			<?php while( have_rows('who_section') ): the_row();?>
 				<section class="who-section">
 					<div class="content">
+
 		        <?php
 							$title = get_sub_field('title');
 		        	$body = get_sub_field('body');
 							$image = get_sub_field('image');
 		    		?>
 						<div class="headline-block">
-							<h2><?php echo $title;?></h2>
+							<div class="c-width-33-3">
+								<?php get_template_part( 'partials/_lady-flower-single' ); ?>
+							</div>
+							<h2 class="c-width-33-3"><?php echo $title;?></h2>
+							<div class="c-width-33-3">
+								<?php get_template_part( 'partials/_lady-flower-single-2' ); ?>
+							</div>
 						</div>
-						<div class="text-half c-width-50">
+						<div class="image-half c-width-50 border-green">
+							<?php get_template_part( 'partials/_area-stitch-border-full' ); ?>
+	  					<img src="<?php echo $image[url];?>"/>
+						</div>
+						<div class="text-half c-width-50 border-green">
 							<p><?php echo $body;?></p>
-						</div>
-						<div class="image-half">
-							<svg class="image-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 2090 1420">
-								<filter id="photo-filter">
-
-								</filter>
-	  						<image xlink:href="<?php echo $image[url];?>"/>
-							</svg>
-							<?php get_template_part( 'partials/_div-border' ); ?>
 						</div>
 					</div>
 				</section>
@@ -62,13 +58,17 @@
 		<?php endif; ?>
 		<?php if( have_rows('what_section') ): ?>
 		  <?php while( have_rows('what_section') ): the_row();?>
-		    <section class="what-section">
+		    <section class="what-section border-yellow">
+					<?php
+						$title = get_sub_field('title');
+						$body = get_sub_field('body');
+					?>
+					<?php get_template_part( 'partials/_area-stitch-border' ); ?>
+					<?php get_template_part( 'partials/_yellow-color-background' ); ?>
 		      <div class="content">
-		        <?php
-		          $title = get_sub_field('title');
-		          $body = get_sub_field('body');
-		        ?>
-		        <h2><?php echo $title;?></h2>
+						<?php get_template_part( 'partials/_cactus-flower' ); ?>
+						<h2><?php echo $title;?></h2>
+						<?php get_template_part( 'partials/_cactus-flower-2' ); ?>
 		        <p><?php echo $body;?></p>
 		      </div>
 		    </section>
@@ -82,8 +82,16 @@
 		          $title = get_sub_field('title');
 		          $body = get_sub_field('body');
 		        ?>
-		        <h2><?php echo $title;?></h2>
-		        <p><?php echo $body;?></p>
+						<div class="text-half c-width-50">
+		        	<h2><?php echo $title;?></h2>
+		        	<p><?php echo $body;?></p>
+						</div>
+						<?php get_template_part( 'partials/_flower-patch-new' ); ?>
+						<?php get_template_part( 'partials/_flower-patch-new-2' ); ?>
+						<div class="image-half c-width-100">
+							<?php get_template_part( 'partials/_hotel-svg' ); ?>
+						</div>
+
 		      </div>
 		    </section>
 		  <?php endwhile; ?>
@@ -92,11 +100,13 @@
 		  <?php while( have_rows('when_section') ): the_row();?>
 		    <section class="when-section">
 		      <div class="content">
+							<?php get_template_part( 'partials/_lady-flower-single' ); ?>
+							<h2><?php echo $title;?></h2>
+							<?php get_template_part( 'partials/_lady-flower-single-2' ); ?>
 		        <?php
 		          $title = get_sub_field('title');
 		          $body = get_sub_field('body');
 		        ?>
-		        <h2><?php echo $title;?></h2>
 		        <p><?php echo $body;?></p>
 		      </div>
 		    </section>
@@ -106,18 +116,20 @@
 		  <?php while( have_rows('response_section') ): the_row();?>
 		    <section class="response-section">
 		      <div class="content">
-		        <?php
+						<?php get_template_part( 'partials/_cactus-only-patch' ); ?>
+						<?php
 		          $title = get_sub_field('title');
-		          $body = get_sub_field('body');
-		        ?>
+		          $body = get_sub_field('body');?>
 		        <h2><?php echo $title;?></h2>
-		        <p><?php echo $body;?></p>
+						<?php get_template_part( 'partials/_cactus-only-patch-2' ); ?>
+						<p><?php echo $body;?></p>
 		      </div>
 		    </section>
 		  <?php endwhile; ?>
 		<?php endif; ?>
 	<?php endwhile; ?>
+	<?php get_template_part( 'partials/_tumbleweed-svg');?>
+	<?php get_template_part( 'partials/_tumbleweed-two-svg');?>
+	<?php get_template_part( 'partials/_tumbleweed-paths-svg');?>
 </main>
-<img class="tumbleweed-one-shadow tumbleweedOneShadow" src="<?php echo get_template_directory_uri();?>/img/tumbleweed-one-shadow.svg" >
-<img class="tumbleweed-one tumbleweedOne" src="<?php echo get_template_directory_uri();?>/img/tumbleweed-1.svg" >
 <?php get_footer(); ?>

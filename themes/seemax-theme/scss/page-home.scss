@@ -29,30 +29,6 @@
   }
 }
 
-.hotel-svg-container {
-  opacity: .5;
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  margin:0 auto;
-  width:70%;
-  height:auto;
-}
-
-.hotel-svg {
-
-  .hotel-svg-outlines, path {
-    fill:none;
-    stroke:$shirtYellow;
-    stroke-width:1;
-    stroke-linecap:
-    round;
-    stroke-linejoin:round;
-    stroke-miterlimit:10;
-  }
-}
-
 
 .headline-block {
   padding:60px 0;
@@ -60,36 +36,28 @@
 
   .site-title {
     position: relative;
-    height:130px;
-    // width:643px;
-  }
-
-  .flower-patch {
-    position: relative;
-    transform: translate(50px, -10px);
-    height:220px;
-    // width:225px;
-  }
-
-  .flower-patch-two {
-    position: relative;
-    transform: translate(-56px, -10px);
+    height:300px;
   }
 }
 
 .hero-section {
 
-  .content {
+  svg {
+    margin:0 auto;
+  }
 
+  .content {
+    justify-content: center;
   }
 
   .text-half {
+
     text-align: center;
-    padding: 0px 0px 0px 40px;
+    padding: 0px 0px 0px 0px;
   }
 
   .image-half {
-
+    text-align: center;
   }
 
 }
@@ -98,6 +66,14 @@
 
 .who-section {
 
+  .content {
+
+  }
+
+  svg {
+    height:auto;
+    width:100%;
+  }
 }
 
 .tumbleweed-one {

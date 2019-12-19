@@ -1,0 +1,43 @@
+@import "colors";
+
+.tumbleweed-path-svg {
+  position: absolute;
+  bottom:30px;
+  left:-500px;
+  width:calc(100% + 1000px);
+  height:auto;
+  visibility: hidden;
+}
+
+.tumbleweed-svg-container {
+  position:absolute;
+  bottom:0;
+  left:0px;
+  margin:0 auto;
+  width:100%;
+  height:auto;
+}
+
+.tumbleweed-svg {
+  opacity: 0;
+  width:120px;
+
+}
+
+
+.tumbleweed-strokes {
+  // filter:url(#tumbleweed-stroke-filter);
+
+  * {
+    // stroke-dasharray:3 3;
+    // vector-effect:non-scaling-stroke;
+    // stroke:#BA824A;
+    // stroke:#4A6235;
+    // stroke:#758A41;
+    fill:$backTan;
+    // stroke-width:1;
+    // stroke-linecap:round;
+    // stroke-linejoin:round;
+    // stroke-miterlimit:10;
+  }
+}
