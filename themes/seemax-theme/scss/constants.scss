@@ -262,3 +262,34 @@
 	.c-width-99,
 	.c-width-100 {width:100%;}
 }
+
+.m-visible {
+	display:none;
+}
+
+.m-hidden {
+	// display:block;
+}
+
+// 1024px And Below
+@media screen and (max-width: 1024px){
+
+	.m-visible {
+		display:block;
+	}
+
+	.m-hidden {
+		display:none;
+	}
+}
+
+// 767px And Below
+@media screen and (max-width: 767px){
+	.m-visible {
+		display:block;
+	}
+
+	.m-hidden {
+		display:none;
+	}
+}

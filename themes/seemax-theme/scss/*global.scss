@@ -6,9 +6,10 @@ html, body {
 }
 
 body {
-	font:400 15px/1.5 'Montserrat', sans-serif;
-	color:black;
+	font:100 16px/1.5 'Montserrat', sans-serif;
+	color:$flowerDarkGreen;
 	position: relative;
+  background: $offTan;
 }
 
 .wrapper {
@@ -38,7 +39,7 @@ section {
 	height:auto;
 	max-width: 1150px;
 	margin:0px auto;
-	padding:100px 55px;
+	padding:60px 50px;
 }
 
 .filter-svg {
@@ -46,9 +47,46 @@ section {
 }
 
 a {
-	color:red;
-	text-decoration:none;
+	position: relative;
+	color:$r1;
+	border-bottom:1px dotted $r1;
 	letter-spacing: 1;
+	transition: all .3s ease;
+
+	&:before {
+		content:"";
+		position: absolute;
+		bottom: 0;
+		left:0;
+		width:100%;
+		height:0px;
+		border-top:1px dotted $r1;
+		transition: all .3s ease;
+	}
+
+	&:after {
+		content:"";
+		position: absolute;
+		bottom:1px;
+		left:0;
+		transform: rotate(180deg);
+		width:100%;
+		height:0px;
+		border-top:1px dotted $r1;
+		transition: all .3s ease;
+	}
+
+	&:hover {
+		border-bottom:3px dotted $r1;
+
+		&:before {
+			height:1px;
+		}
+
+		&:after {
+			bottom:-3px;
+		}
+	}
 }
 
 .headline-block {
@@ -62,36 +100,39 @@ a {
 
 h1, h2, h3, h4, h5 {
 	font:100 72px/1 'Clarendon', serif;
-	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 1px;
 	color:$flowerDarkGreen;
 	margin:0;
 	width:auto;
+	opacity:0.85;
 }
 
 h1 {
-	// filter:url('#headline-stitch');
 	text-align: center;
 	font-size:90px;
 	line-height: .9;
 }
 
 h2 {
-	font-size:60px;
+	font-size:70px;
+	font-weight: 400;
+	color:$r1;
 }
 
 h3 {
-	font-size:2.25em;
+	font-size:50px;
+	letter-spacing: 1px;
 }
 
 h4 {
-	font-size:1.5em;
+	font-size:45px;
 }
 
 h5 {
-	font-size:1em;
+	font-size:28px;
 }
+
 
 p {
 	width:100%;
@@ -105,7 +146,7 @@ ul {
 }
 
 hr {
-	background: black;
+	background:none;
 	margin:0;
 	text-align: left;
 	border:0;
@@ -141,11 +182,12 @@ hr {
 }
 
 .text-half {
-	display: flex;
-	align-items: center;
-	align-content: center;
-	flex-wrap: wrap;
-  padding-right:40px;
+	position: relative;
+	// display: flex;
+	// align-items: center;
+	// align-content: center;
+	// flex-wrap: wrap;
+  // padding-right:40px;
 }
 
 // 1024px And Below

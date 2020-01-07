@@ -8,6 +8,7 @@
   left:22px;
   width:calc(100% - 44px);
 	height:calc(100% - 44px);
+	transition: all .3s ease;
 }
 
 .area-stitch-border-1 {
@@ -55,6 +56,7 @@
   left:-2px;
   width:calc(100% + 4px);
 	height:calc(100% + 4px);
+	transition: all .3s ease;
 }
 
 .area-stitch-border-full-1 {
@@ -136,5 +138,12 @@
 
 	.area-stitch-border-full, .area-stitch-border {
 		border-color: $g1;
+	}
+}
+
+.border-red {
+
+	.area-stitch-border-full, .area-stitch-border {
+		border-color: $r1;
 	}
 }

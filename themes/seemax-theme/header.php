@@ -22,7 +22,7 @@
 
 		gtag('config', 'UA-77219320-2');
 	</script>
-
+	<script src="https://kit.fontawesome.com/34b9d94a02.js" crossorigin="anonymous"></script>
 </head>
 <body <?php body_class(); ?> >
 <div class="wrapper">
@@ -30,28 +30,18 @@
 	<!-- <div id="preloader">
 		<img src="<?php echo get_template_directory_uri();?>/img/preloader.svg" >
 	</div> -->
-	<!-- <header class="header" role="banner">
+	<header class="header" role="banner">
+		<?php get_template_part( 'partials/_area-stitch-border-full' ); ?>
 		<div class="content header-inner-wrap">
-			<div class="header-logo">
-				<a class="c-block-fill" href="/"></a>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/flower-patch-two.svg" >
-				<img src="<?php echo get_template_directory_uri(); ?>/img/flower-patch.svg" >
-				<img src="<?php echo get_template_directory_uri(); ?>/img/flower-patch-two.svg" >
-			</div>
 			<nav class="main-nav mainNav" role="navigation">
-				<?php main_theme_nav(); ?>
+				<ul>
+				</ul>
 			</nav>
-			<div class="header-logo">
-				<a class="c-block-fill" href="/"></a>
-				<img src="<?php echo get_template_directory_uri(); ?>/img/flower-patch.svg" >
-				<img src="<?php echo get_template_directory_uri(); ?>/img/flower-patch-two.svg" >
-				<img src="<?php echo get_template_directory_uri(); ?>/img/flower-patch.svg" >
-			</div>
 			<div class="mobile-menu menuToggle">
 				<span class="hamTop"></span>
 				<span class="hamMid"></span>
 				<span class="hamBot"></span>
 			</div>
 		</div>
-	</header> -->
+	</header>
 	<?php get_template_part( 'partials/_svg-back-and-filters' ); ?>

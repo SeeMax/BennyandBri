@@ -20,7 +20,6 @@
 
 
 .patch-color-strokes {
-  filter:url(#patch-stroke-filter);
 
   * {
     stroke-dasharray:3 3;
@@ -44,51 +43,4 @@
   .r1{
     stroke:#C62B2A;
   }
-}
-
-.lady-flower-full {
-  position: relative;
-  height:260px;
-}
-
-.lady-flower-single {
-  position: relative;
-  height:260px;
-}
-
-.lady-flower-single-2 {
-
-}
-
-.flower-patch-new {
-  position: relative;
-  height:260px;
-}
-
-.flower-patch-new-2 {
-
-}
-
-
-.cactus-only-patch {
-  position: relative;
-  height:400px;
-}
-
-.cactus-only-patch-2 {
-
-}
-
-.cactus-flower {
-  position: relative;
-  height:400px;
-}
-
-.cactus-flower-2 {
-
-}
-
-.cactus-flower-full {
-  position: relative;
-  height:260px;
 }

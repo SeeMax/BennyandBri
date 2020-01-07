@@ -21,28 +21,11 @@
     <feBlend mode="normal" in="SourceGraphic" in2="fill-shadow-2" result="fill-shadow-3"/>
     <!-- Patch Merge -->
     <feMerge>
-      <feMergeNode in="fill-shadow-3" />
+      <!-- <feMergeNode in="fill-shadow-3" /> -->
       <feMergeNode in="patch-back-2" />
-      <feMergeNode in="full-patch-1" />
-      <feMergeNode in="full-patch-2" />
-      <feMergeNode in="full-patch-3" />
-    </feMerge>
-  </filter>
-
-  <filter id="patch-stroke-filter" x="-50%" y="-50%" width="200%" height="200%">
-    <!-- Patch Border Texture -->
-    <feTurbulence baseFrequency="1 1" type="fractalNoise" numOctaves="1" seed="0" result="border-texture-1" />
-    <feDisplacementMap scale="7" in="SourceGraphic" in2="border-texture-1" result="border-texture-2" />
-    <!-- Stroke Shadow -->
-    <feMorphology in="SourceAlpha" result="stroke-shadow-off-1" operator="dilate" radius="1"/>
-    <feOffset result="stroke-shadow-off" in="stroke-shadow-off-1" dx="-.25" dy=".5" />
-    <feGaussianBlur result="stroke-shadow-1" in="stroke-shadow-off" stdDeviation=".25" />
-    <feColorMatrix in="stroke-shadow-1" result="stroke-shadow-2" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .25 0"/>
-    <feBlend mode="normal" in="SourceGraphic" in2="stroke-shadow-2" result="stroke-shadow-3"/>
-    <!-- Border and Patch Merge -->
-    <feMerge>
-      <feMergeNode in="stroke-shadow-3" />
-      <feMergeNode in="border-texture-2" />
+        <feMergeNode in="full-patch-1" />
+        <feMergeNode in="full-patch-2" />
+        <feMergeNode in="full-patch-3" />
     </feMerge>
   </filter>
 

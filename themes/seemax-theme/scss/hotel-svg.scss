@@ -1,13 +1,14 @@
 @import "colors";
 
 .hotel-svg-container {
-  position:absolute;
+  position:relative;
   bottom:0;
   left:0;
   right:0;
   margin:0 auto;
   width:70%;
   height:auto;
+  opacity:1;
 }
 
 .hotel-svg {
