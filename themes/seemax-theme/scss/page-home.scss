@@ -1,17 +1,18 @@
 @import "colors";
 
-.coming-soon {
-
-  h1 {
-    width:100%;
-  }
-}
-
 .home-page {
   padding-top:81px;
 
   svg {
     overflow: visible;
+    width:100%;
+    height:auto;
+  }
+
+  .svg-filter-svg {
+  	height:0;
+  	width:0;
+  	overflow: hidden;
   }
 
   .headline-svg {
@@ -30,6 +31,7 @@
   }
 
   h2 {
+    font-size: 100px;
     font-weight: 100;
     margin-top:20px;
     color:$flowerDarkGreen;
@@ -37,9 +39,10 @@
 
   .headline-patch {
     text-align: center;
+    height:auto;
 
     svg {
-
+      height:auto;
     }
   }
 
@@ -60,14 +63,12 @@
 
   hr {
     margin:0 auto;
-    width:100%;
-    max-width:70px;
+    width:70px;
     border-top: 1px dotted $r1;
     height:0;
 
     &:nth-of-type(even) {
       transform: rotate(180deg);
-      // opacity:0.25;
     }
   }
 }
@@ -86,13 +87,17 @@
   }
 }
 
-
-
 .site-title {
   margin:0 auto;
   position: relative;
   width:100%;
+  height:auto;
   max-width:800px;
+
+  .site-title-svg {
+    width:100%;
+    height:100%;
+  }
 }
 
 .site-title-subtext {
@@ -114,7 +119,6 @@
   h3 {
     width: 100%;
     text-align: center;
-
   }
 
   .hr-area {
@@ -153,16 +157,8 @@
 
 .events-section {
 
-  .content {
-
-  }
-
   h2 {
-
-  }
-
-  .headline-block {
-
+    font-size:120px;
   }
 
   .headline-patch {
@@ -175,9 +171,6 @@
     transform-origin:(50%, 50%);
   }
 
-  .headline-svg {
-
-  }
 
   .events-container {
     width:100%;
@@ -273,37 +266,11 @@
   }
 
   h2 {
-    width:100%;
     color:$g2;
   }
 
-  .headline-svg {
-
-    text {
-      font-size:26px;
-    }
-  }
-
-  .headline-block {
-    text-align: center;
-    position: relative;
-    margin-bottom:0px;
-
-    text {
-      fill:$g2;
-    }
-
-    .hr-area {
-      position: absolute;
-      left:0;
-      right:0;
-      bottom:14px;
-      margin:0 auto;
-
-      hr {
-        // max-width:150px;
-      }
-    }
+  .hr-area {
+    margin-top:24px;
   }
 
   .ways-patch {
@@ -332,6 +299,10 @@
     text-align: center;
     padding:0px 25px;
     margin:40px 0;
+
+    .hr-area {
+      margin:10px 0px;
+    }
   }
 
   .way-code {
@@ -369,10 +340,6 @@
     }
   }
 
-  .hr-area {
-    margin:10px 0px;
-  }
-
   .way-name {
     margin-bottom:20px;
   }
@@ -390,7 +357,7 @@
 .where-section {
 
   .content {
-    padding-top:0px;
+    // padding-top:0px;
   }
 
   .intro-container {
@@ -409,23 +376,23 @@
     }
 
     .hr-area {
-      position: absolute;
-      left:0;
-      right:0;
-      bottom:34px;
-      margin:0 auto;
+
     }
   }
 
   .intro-container {
-    margin-bottom:-40px;
+    margin-bottom:40px;
     display: flex;
     flex-wrap:wrap;
     justify-content: center;
+
+    p {
+      padding-left:35px;
+    }
   }
 
   .headline-patch {
-    transform: translate(-20px,-16px);
+    // transform: translate(-20px,-16px);
   }
 
   .headline-patch-1 {
@@ -505,11 +472,7 @@
     }
 
     .hr-area {
-      position: absolute;
-      left:0;
-      right:0;
-      bottom:34px;
-      margin:0 auto;
+
     }
   }
 
@@ -543,6 +506,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
+    margin-top:40px;
   }
 
   .single-todo {
@@ -614,11 +578,6 @@
     width:100%;
   }
 
-
-  .hr-area {
-
-  }
-
   .todo-phone {
     margin-bottom: 5px;
     width:100%;
@@ -632,47 +591,19 @@
 .eating-section {
 
   .content {
-    padding-top:0px;
-  }
-
-  .intro-container {
-
+    // padding-top:0px;
   }
 
   .headline-block {
     position: relative;
     margin:0 auto;
-
-    .headline-svg {
-
-      text {
-        font-size:18px;
-      }
-    }
-
-    .hr-area {
-      position: absolute;
-      left:0;
-      right:0;
-      bottom:34px;
-      margin:0 auto;
-    }
   }
 
-  .intro-container {
-    margin-bottom:-40px;
-    display: flex;
-    flex-wrap:wrap;
-    justify-content: center;
+  h2 {
+    font-size:92px;
   }
 
   .headline-patch {
-    // display: flex;
-    // align-items: flex-end;
-    // align-content: flex-end;
-    // transform: translate(-20px,-16px);
-    // height:auto;
-    // width:100%;
 
     .cactus-flower {
       transform: translate(-40px,-16px);
@@ -683,19 +614,12 @@
     }
   }
 
-  .headline-patch-1 {
-
-  }
-
-  .headline-patch-2 {
-
-  }
-
   .eating-container {
     position: relative;
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
+    margin-top:40px;
   }
 
   .single-eating {
@@ -717,7 +641,7 @@
     }
 
     .hr-area {
-      margin: 12px 0;
+
     }
   }
 
@@ -751,30 +675,11 @@
   padding-bottom:60px;
 
   .content {
-    padding-top:0px;
     justify-content: center;
   }
 
   p {
     margin-top:0;
-  }
-
-  .headline-block {
-
-    .hr-area {
-      position: absolute;
-      left:0;
-      right:0;
-      bottom:30px;
-      margin:0 auto;
-    }
-  }
-
-  .headline-svg {
-
-    text {
-      font-size:20px;
-    }
   }
 
   a {
@@ -808,17 +713,6 @@
 
   .content {
     justify-content: center;
-  }
-
-  .headline-block {
-
-    .hr-area {
-      position: absolute;
-      left:0;
-      right:0;
-      bottom:30px;
-      margin:0 auto;
-    }
   }
 
   .body-block {
@@ -857,10 +751,13 @@
   }
 
   .wpcf7-list-item-label {
-    // font-size:16px;
     padding-left:4px;
     margin-bottom:4px;
     font-weight: 100;
+  }
+
+  [data-class="wpcf7cf_group"] {
+    margin-bottom:26px;
   }
 
   .headline-svg {
@@ -929,123 +826,138 @@
 // 767px And Below
 @media screen and (max-width: 767px){
 
-  h2 {
-    font-size: 62px;
-    width:100%;
-  }
+  .home-page {
+    h2 {
+      font-size: 62px;
+      width:100%;
+    }
 
-  h4 {
-    font-size: 38px;
-  }
-
-  .content {
-    padding-left:20px;
-    padding-right:20px;
-  }
-
-  .site-title-subtext {
-    transform:translateY(-10px);
-  }
-
-  .hero-section {
+    h4 {
+      font-size: 38px;
+    }
 
     .content {
-      padding:30px;
+      padding-left:20px;
+      padding-right:20px;
     }
 
-    .text-half {
-      margin-top:26px;
-      padding:40px 16px;
+    .site-title-subtext {
+      transform:translateY(-10px);
     }
 
-    h3 {
-      font-size:46px;
-    }
-  }
+    .hero-section {
 
-  .getting-there-section {
+      .content {
+        padding:30px;
+      }
 
-    .ways-patch {
-      position:relative;
-      top:0;
-      left:-50%;
-      height:200px;
-      text-align: center;
-      transform:translateX(50%);
-      margin:0px 0 -30px 0;
+      .text-half {
+        margin-top:26px;
+        padding:40px 16px;
+        margin-left:0%;
+      }
 
-
-
-      svg {
-        position: relative;
-        bottom:0;
-        height:100%;
-        margin:0 auto;
+      h3 {
+        font-size:46px;
       }
     }
 
-    .ways-patch-2 {
-      display: none;
-    }
-  }
+    .events-section {
 
-  .where-section {
-    padding-top:30px;
-
-    .intro-container {
-      margin-bottom:20px;
+      h2 {
+        font-size: 72px;
+      }
     }
 
-    .headline-patch {
-      margin-bottom:-70px;
-    }
-  }
+    .getting-there-section {
 
-  .todo-section {
+      .ways-patch {
+        position:relative;
+        top:0;
+        left:-50%;
+        height:200px;
+        text-align: center;
+        transform:translateX(50%);
+        margin:0px 0 -30px 0;
 
-    .content {
-      padding-top:0px;
-    }
+        svg {
+          position: relative;
+          bottom:0;
+          height:100%;
+          margin:0 auto;
+        }
+      }
 
-    h4.todo-name {
-      margin-top:50px;
-    }
-
-    .single-todo {
-      margin-top:0;
-    }
-  }
-
-  .eating-section {
-
-    .eating-container {
-      margin-top:30px;
-    }
-  }
-
-  .registry-section {
-    padding:60px 20px;
-
-    .area-stitch-border, .color-background {
-      width:calc(100% - 20px);
-      left:10px;
-    }
-  }
-
-  .rsvp-section {
-
-    .form-container {
-      width:100%;
-      padding:30px 20px;
+      .ways-patch-2 {
+        display: none;
+      }
     }
 
-    input[type=text], input[type=email], textarea {
-      width: 100%;
+    .where-section {
+      padding-top:30px;
+
+      .intro-container {
+        margin-bottom:20px;
+
+        p {
+          padding-left:0px;
+        }
+      }
+
+      .headline-patch {
+        // margin-bottom:-70px;
+      }
     }
 
-    .area-stitch-border {
-      width:100%;
-      left:0;
+    .todo-section {
+
+      .content {
+        padding-top:0px;
+      }
+
+      .todo-subsection {
+        margin-top: 0px;
+      }
+
+      h4.todo-name {
+        margin-top:50px;
+      }
+
+      .single-todo {
+        margin-top:0;
+      }
+    }
+
+    .eating-section {
+
+      .eating-container {
+        margin-top:30px;
+      }
+    }
+
+    .registry-section {
+      padding:0px 25px;
+
+      .content {
+        padding:70px 30px 100px 30px;
+      }
+    }
+
+    .rsvp-section {
+
+      .form-container {
+        width:100%;
+        padding:30px 20px;
+      }
+
+      input[type=text], input[type=email], textarea {
+        width: 100%;
+      }
+
+      .area-stitch-border {
+        width:100%;
+        left:0;
+      }
     }
   }
 }

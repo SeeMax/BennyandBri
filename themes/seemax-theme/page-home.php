@@ -1,5 +1,6 @@
 <?php /* Template Name: Home */ get_header(); ?>
 <main class="home-page">
+	<?php get_template_part( 'partials/_filter-svg' ); ?>
 	<?php while (have_posts()) : the_post(); ?>
 
 		<?php if( have_rows('title_section') ): ?>
@@ -44,18 +45,15 @@
 				<section class="events-section">
 					<div class="content">
 		        <?php $title = get_sub_field('title');?>
-						<div class="headline-block m-hidden">
-							<div class="headline-patch c-width-20 headline-patch-1">
+						<div class="headline-block">
+							<div class="headline-patch c-width-20 m-hidden headline-patch-1">
 								<?php get_template_part( 'partials/_flower-patch-new' ); ?>
 							</div>
-							<svg class="headline-svg c-width-50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-  							<text x="100" y="40"><?php echo $title;?></text>
-							</svg>
-							<div class="headline-patch c-width-20 headline-patch-2">
+							<h2 class="c-width-50"><?php echo $title;?></h2>
+							<div class="headline-patch c-width-20 m-hidden headline-patch-2">
 								<?php get_template_part( 'partials/_flower-patch-new-2' ); ?>
 							</div>
 						</div>
-						<h2 class="m-visible"><?php echo $title;?></h2>
 						<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>
 						<div class="events-container">
 							<?php if( have_rows('events_list') ):
@@ -101,14 +99,10 @@
 					<?php get_template_part( 'partials/_area-stitch-border' ); ?>
 					<?php get_template_part( 'partials/_yellow-color-background' ); ?>
 		      <div class="content">
-						<div class="headline-block m-hidden">
-							<svg class="headline-svg c-width-70" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-								<text x="100" y="35"><?php echo $title;?></text>
-							</svg>
+						<div class="headline-block">
+							<h2 class="c-width-100"><?php echo $title;?></h2>
 							<div class="hr-area"><hr /><hr /><hr /><hr /></div>
 						</div>
-						<h2 class="m-visible"><?php echo $title;?></h2>
-						<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>
 		        <?php if ($body):?>
 							<p><?php echo $body;?></p>
 						<?php endif;?>
@@ -154,22 +148,15 @@
 		          $title = get_sub_field('title');
 		          $body = get_sub_field('body');
 		        ?>
-						<div class="headline-block m-hidden">
-							<svg class="headline-svg c-width-100" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-								<text x="100" y="35"><?php echo $title;?></text>
-							</svg>
+						<div class="headline-block">
+							<h2 class="c-width-100"><?php echo $title;?></h2>
 							<div class="hr-area"><hr /><hr /><hr /><hr /></div>
 						</div>
-						<h2 class="m-visible"><?php echo $title;?></h2>
-						<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>
 	        	<div class="intro-container c-width-100">
-							<div class="headline-patch c-width-40 headline-patch-1">
+							<div class="headline-patch c-width-35 headline-patch-1">
 								<?php get_template_part( 'partials/_lady-flower-single' ); ?>
 							</div>
-							<p class="c-width-60"><?php echo $body;?></p>
-							<!-- <div class="headline-patch c-width-50 headline-patch-2">
-								<?php get_template_part( 'partials/_lady-flower-single-2' ); ?>
-							</div> -->
+							<p class="c-width-65"><?php echo $body;?></p>
 						</div>
 						<?php if( have_rows('staying_locations') ):?>
 							<div class="locations-container c-width-100">
@@ -197,7 +184,6 @@
 										</div>
 									<?php endif;?>
 									<?php if (get_sub_field('website')):?>
-										<!-- <div class="hr-area hr-green"><hr /><hr /></div> -->
 								  	<div class="location-website">
 											<a href="<?php the_sub_field('website');?>" target="_blank">
 												Website
@@ -221,16 +207,11 @@
 		          $title = get_sub_field('title');
 		          $body = get_sub_field('body');
 		        ?>
-						<div class="headline-block m-hidden">
-							<svg class="headline-svg c-width-100" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-								<text x="100" y="35"><?php echo $title;?></text>
-							</svg>
+						<div class="headline-block">
+							<h2 class="c-width-100"><?php echo $title;?></h2>
 							<div class="hr-area"><hr /><hr /><hr /><hr /></div>
 						</div>
-						<h2 class="m-visible"><?php echo $title;?></h2>
-						<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>
 						<div class="todos-container c-width-100">
-
 							<div class="todo-subsection c-width-30">
 								<?php if (get_sub_field('subtitle_1')):?>
 									<h4 class="todo-name">
@@ -265,7 +246,6 @@
 												</div>
 											<?php endif;?>
 											<?php if (get_sub_field('website')):?>
-												<!-- <div class="hr-area hr-green"><hr /><hr /></div> -->
 										  	<div class="todo-website">
 													<a href="<?php the_sub_field('website');?>" target="_blank">
 														Website
@@ -311,7 +291,6 @@
 												</div>
 											<?php endif;?>
 											<?php if (get_sub_field('website')):?>
-												<!-- <div class="hr-area hr-green"><hr /><hr /></div> -->
 										  	<div class="todo-website">
 													<a href="<?php the_sub_field('website');?>" target="_blank">
 														Website
@@ -357,7 +336,6 @@
 												</div>
 											<?php endif;?>
 											<?php if (get_sub_field('website')):?>
-												<!-- <div class="hr-area hr-green"><hr /><hr /></div> -->
 										  	<div class="todo-website">
 													<a href="<?php the_sub_field('website');?>" target="_blank">
 														Website
@@ -382,12 +360,9 @@
 		          $title = get_sub_field('title');
 		          $body = get_sub_field('body');
 		        ?>
-						<div class="headline-block m-hidden">
-							<svg class="headline-svg c-width-100" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-								<text x="100" y="35"><?php echo $title;?></text>
-							</svg>
+						<div class="headline-block">
+							<h2 class="c-width-100"><?php echo $title;?></h2>
 						</div>
-						<h2 class="m-visible"><?php echo $title;?></h2>
 						<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>
 						<div class="headline-patch m-hidden c-width-35 headline-patch-2">
 							<?php get_template_part( 'partials/_cactus-flower-2' ); ?>
@@ -425,7 +400,6 @@
 										</div>
 									<?php endif;?>
 									<?php if (get_sub_field('website')):?>
-										<!-- <div class="hr-area hr-green"><hr /><hr /></div> -->
 								  	<div class="eating-website">
 											<a href="<?php the_sub_field('website');?>" target="_blank">
 												Website
@@ -453,13 +427,10 @@
 							$linkText = get_sub_field('link_text');
 							$link = get_sub_field('link');
 		        ?>
-						<div class="headline-block m-hidden">
-							<svg class="headline-svg c-width-100" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-								<text x="100" y="35"><?php echo $title;?></text>
-							</svg>
+						<div class="headline-block">
+							<h2 class="c-width-100"><?php echo $title;?></h2>
 						</div>
-						<h2 class="m-visible"><?php echo $title;?></h2>
-						<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>
+						<div class="hr-area"><hr /><hr /><hr /><hr /></div>
 		        <p><?php echo $body;?></p>
 						<div class="button border-red">
 							<?php get_template_part( 'partials/_area-stitch-border-full' ); ?>
@@ -476,24 +447,19 @@
 		  <?php while( have_rows('rsvp_section') ): the_row();?>
 		    <section class="rsvp-section">
 		      <div class="content">
-						<?php get_template_part( 'partials/_cactus-only-patch' ); ?>
 						<?php
-		          $title = get_sub_field('title');
-		          $body = get_sub_field('body');?>
-							<div class="headline-block m-hidden">
-								<svg class="headline-svg c-width-100" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
-									<text x="100" y="35"><?php echo $title;?></text>
-								</svg>
-								<div class="hr-area"><hr /><hr /><hr /><hr /></div>
-							</div>
-							<h2 class="m-visible"><?php echo $title;?></h2>
-							<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>
-			        <p class="body-block"><?php echo $body;?></p>
-							<div class="form-container c-width-100 border-green">
-								<?php get_template_part( 'partials/_area-stitch-border' ); ?>
-								<?php echo do_shortcode('[contact-form-7 id="158" title="rsvp"]');?>
-							</div>
-						<?php get_template_part( 'partials/_cactus-only-patch-2' ); ?>
+	          	$title = get_sub_field('title');
+	          	$body = get_sub_field('body');
+						?>
+						<div class="headline-block">
+							<h2 class="c-width-100"><?php echo $title;?></h2>
+							<div class="hr-area"><hr /><hr /><hr /><hr /></div>
+						</div>
+		        <p class="body-block"><?php echo $body;?></p>
+						<div class="form-container c-width-100 border-green">
+							<?php get_template_part( 'partials/_area-stitch-border' ); ?>
+							<?php echo do_shortcode('[contact-form-7 id="158" title="rsvp"]');?>
+						</div>
 		      </div>
 		    </section>
 		  <?php endwhile; ?>

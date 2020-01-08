@@ -1,34 +1,4 @@
-<svg class="site-title" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 400">
-
-  <filter id="patch-fill-filter" x="-50%" y="-50%" width="200%" height="200%">
-    <!-- Patch White Back -->
-    <feFlood flood-color="#FFFFFF" result="patch-back-1" />
-    <feComposite in="patch-back-1" in2="SourceAlpha" operator="in" result="patch-back-2" />
-    <!-- Patch Fill -->
-    <feTurbulence type="fractalNoise" baseFrequency='.251 1' result='patch-noise-1' numOctaves="1" />
-    <feTurbulence type="fractalNoise" baseFrequency='1 .251' result='patch-noise-2' numOctaves="1" />
-    <feTurbulence type="fractalNoise" baseFrequency='.5 .5' result='patch-noise-3' numOctaves="10" />
-    <feDisplacementMap in="SourceGraphic" in2="patch-noise-1" scale="1" xChannelSelector="R" yChannelSelector="R" result="patch-1"></feDisplacementMap>
-    <feDisplacementMap in="SourceGraphic" in2="patch-noise-2" scale="1" xChannelSelector="R" yChannelSelector="R" result="patch-2"></feDisplacementMap>
-    <feDisplacementMap in="SourceGraphic" in2="patch-noise-3" scale="1" xChannelSelector="R" yChannelSelector="R" result="patch-3"></feDisplacementMap>
-    <feComposite operator="out" in="SourceGraphic" in2="patch-noise-1" result="full-patch-1" />
-    <feComposite operator="out" in="SourceGraphic" in2="patch-noise-2" result="full-patch-2" />
-    <feComposite operator="out" in="SourceGraphic" in2="patch-noise-3" result="full-patch-3" />
-    <!-- Patch Shadow -->
-    <feOffset result="fill-shadow-off" in="SourceAlpha" dx="-1" dy="1" />
-    <feGaussianBlur result="fill-shadow-1" in="fill-shadow-off" stdDeviation="1.5" />
-    <feColorMatrix in="fill-shadow-1" result="fill-shadow-2" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .75 0"/>
-    <feBlend mode="normal" in="SourceGraphic" in2="fill-shadow-2" result="fill-shadow-3"/>
-    <!-- Patch Merge -->
-    <feMerge>
-      <!-- <feMergeNode in="fill-shadow-3" /> -->
-      <feMergeNode in="patch-back-2" />
-        <feMergeNode in="full-patch-1" />
-        <feMergeNode in="full-patch-2" />
-        <feMergeNode in="full-patch-3" />
-    </feMerge>
-  </filter>
-
+<svg class="site-title-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 400">
   <g class="patch-color-fills">
     <path class="g1" d="M773.7,158.8c-4.8-37.5,25.1-68.6,45.6-73.6C822.9,114.9,801.4,152.1,773.7,158.8z"/>
     <path class="g1" d="M665.2,269.3c36.9-19.6,97.6,44,102.3,75.2C726.9,358.7,656.3,305.7,665.2,269.3z"/>
