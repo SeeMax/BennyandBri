@@ -7,7 +7,8 @@
 			<?php while( have_rows('title_section') ): the_row();?>
 				<?php $body = get_sub_field('body');?>
 				<div class="site-title">
-					<?php get_template_part( 'partials/_site-title');?>
+					<!-- <?php get_template_part( 'partials/_site-title');?> -->
+					<img src="<?php bloginfo('template_url'); ?>/img/site-title-1.svg">
 				</div>
 				<div class="site-title-subtext c-width-100">
 					<?php echo $body;?>
@@ -48,10 +49,12 @@
 						<div class="headline-block">
 							<div class="headline-patch c-width-20 m-hidden headline-patch-1">
 								<?php get_template_part( 'partials/_flower-patch-new' ); ?>
+								<!-- <img src="<?php bloginfo('template_url'); ?>/img/flower-patch-new.svg"> -->
 							</div>
 							<h2 class="c-width-50"><?php echo $title;?></h2>
 							<div class="headline-patch c-width-20 m-hidden headline-patch-2">
-								<?php get_template_part( 'partials/_flower-patch-new-2' ); ?>
+								<!-- <?php get_template_part( 'partials/_flower-patch-new-2' ); ?> -->
+								<img src="<?php bloginfo('template_url'); ?>/img/flower-patch-new-2.svg">
 							</div>
 						</div>
 						<div class="hr-area m-visible"><hr /><hr /><hr /><hr /></div>

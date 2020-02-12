@@ -1,0 +1,131 @@
+<svg class="flower-patch-new flower-patch-new-2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 510">
+	<defs>
+	  <style>
+	    .patch-color-fills {
+	      filter:url(#patch-fill-filter);
+	    }
+
+	    .patch-color-fills  * {
+	      fill:#000000;
+	    }
+
+	    .patch-color-fills .g1{
+	      fill:#4A6235;
+	    }
+
+	    .patch-color-fills .g2 {
+	      fill:#758A41;
+	    }
+
+	    .patch-color-fills .r1{
+	      fill:#C62B2A;
+	    }
+
+	    .patch-color-strokes * {
+	      stroke-dasharray:3 3;
+	      vector-effect:non-scaling-stroke;
+	      stroke:#000000;
+	      fill:none;
+	      stroke-width:1.5;
+	      stroke-linecap:round;
+	      stroke-linejoin:round;
+	      stroke-miterlimit:10;
+	    }
+
+	    .patch-color-strokes .g1{
+	      stroke:#4A6235;
+	    }
+
+	    .patch-color-strokes .g2{
+	      stroke:#758A41;
+	    }
+
+	    .patch-color-strokes .r1{
+	      stroke:#C62B2A;
+	    }
+	  </style>
+	  <filter id="patch-fill-filter" x="0" y="0" width="100%" height="100%">
+	    <!-- Patch White Back -->
+	    <feFlood flood-color="#FFFFFF" result="patch-back-1"></feFlood>
+	    <feComposite in="patch-back-1" in2="SourceAlpha" operator="in" result="patch-back-2"></feComposite>
+	    <!-- Patch Fill -->
+	    <feTurbulence type="fractalNoise" baseFrequency='.251 1' result='patch-noise-1' numOctaves="1"></feTurbulence>
+	    <feTurbulence type="fractalNoise" baseFrequency='1 .251' result='patch-noise-2' numOctaves="1"></feTurbulence>
+	    <feTurbulence type="fractalNoise" baseFrequency='.5 .5' result='patch-noise-3' numOctaves="10"></feTurbulence>
+	    <feComposite operator="out" in="SourceGraphic" in2="patch-noise-1" result="full-patch-1"></feComposite>
+	    <feComposite operator="out" in="SourceGraphic" in2="patch-noise-2" result="full-patch-2"></feComposite>
+	    <feComposite operator="out" in="SourceGraphic" in2="patch-noise-3" result="full-patch-3"></feComposite>
+	    <!-- Patch Shadow -->
+	    <feOffset result="fill-shadow-off" in="SourceAlpha" dx="-1" dy="1"></feOffset>
+	    <feGaussianBlur result="fill-shadow-1" in="fill-shadow-off" stdDeviation="1.5"></feGaussianBlur>
+	    <feColorMatrix in="fill-shadow-1" result="fill-shadow-2" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .75 0"></feColorMatrix>
+	    <feBlend mode="normal" in="SourceGraphic" in2="fill-shadow-2" result="fill-shadow-3"></feBlend>
+	    <!-- Patch Merge -->
+	    <feMerge>
+	      <feMergeNode in="fill-shadow-3"></feMergeNode>
+	      <feMergeNode in="patch-back-2"></feMergeNode>
+	      <feMergeNode in="full-patch-1"></feMergeNode>
+	      <feMergeNode in="full-patch-2"></feMergeNode>
+	      <feMergeNode in="full-patch-3"></feMergeNode>
+	    </feMerge>
+	  </filter>
+	</defs>
+	<g class="patch-color-fills">
+		<path class="r1" d="M247.5,189.6c5.8,18.6,4.8,31.2,4.8,31.2s4.9-12.6,21.2-26.8c10-8.8,22.5-12.1,35.1-9.3
+			c6.5,1.5,12.6,4.6,17.7,8.8c-1.8-0.2-3.6-0.3-5.4-0.3c-9.1,0-18.3,2.5-26.9,7.5c0,0,0,0,0,0c-16.1,9.4-23.8,34.7-31.9,61.4
+			c-8.7,28.3-17.6,57.6-35.9,67.4c-0.5-1.5-1.2-3.2-1.9-5.1c-7.7-19.9-1.2-45.5,5.2-70.1c5.7-22.2,11.1-43.2,6.1-60
+			c-4.5-14.8-13.8-26-26.4-31.6c9,0.1,17.8,2.8,25,8C240.6,175.3,245,181.7,247.5,189.6z"/>
+
+		<path class="r1" d="M280.1,130.1c-19.7-4.1-38.8,5.2-42.1,18c7.1,5.2,26.1,6.5,24.1,34.4c10.9-25.7,38-19.7,50-16.4
+			C312.2,154.5,301.3,134.5,280.1,130.1z"/>
+
+		<path class="r1" d="M238.8,362c32.7,15.5,62.6-80.6,76.6-101.9c14.8-22.4,29.2-15.9,42.6-6.4c13.3,9.5,16.7,27.4,16.7,27.4
+			c10.8-25.6-1.1-50.6-21-61.4c-13.2-7.2-29.8-8.1-45.5,1.1c-30.4,18-29.6,110.5-69.4,129.6C238.8,350.2,230.9,358.2,238.8,362z"/>
+
+		<path class="r1" d="M202.2,335.7c-15.6-40,22.6-97.4,12.4-130.6c-8.5-28.2-34.6-37-55-27.2c-10.7,5.1-19.7,15.3-24,30.4
+			c0,0,12.4-11.5,26.8-10.1c14.3,1.3,27.8,5.7,24.7,32.3c-2.8,24.6-23,107,5.1,120c1.6,0.7,3.3,1.2,5.2,1.5c0,0-5.7,1.4,0,0
+			S202.2,335.7,202.2,335.7z"/>
+
+		<path class="g2" d="M229.1,121c9.6-4.1,20.5-32.8,20.5-59.6c0-21.4-8.4-36-20.5-45.9c-11.3,7.1-24.8,21.6-24.7,45.9
+			C204.4,90.5,218.6,121,229.1,121L229.1,121L229.1,121z"/>
+
+		<path class="g2" d="M339.9,149.9c8.1,8,38.8,5.2,64.9-5.6c20.5-8.7,31.2-23.1,35.5-39.2c-11.7-8.5-31.5-16.1-54.8-6.4
+			C357.1,110.4,335.3,139,339.9,149.9L339.9,149.9z"/>
+
+		<path class="g2" d="M222.5,412.4c3.5,11.6,33,24.5,62.2,27.2c23.3,2.2,40.1-6.2,52-19.4c-6.5-14-20.9-31.3-47.1-33.7
+			C257.9,383.6,223.4,399.8,222.5,412.4L222.5,412.4z"/>
+
+		<path class="g1" d="M217.5,357.5c-10-3.3-16.5,25.7-58.6,68.2c-42.8,43.3-95.9,56-96.5,56.1c-3.9,0.9-6.7,4.2-7,8.3
+			c-0.1,1,0,1.9,0.1,2.8c1,4.2,4.8,7,8.9,7c0.7,0,1.3-0.1,2-0.3c2.3-0.6,58.6-13.9,105.4-61.1c19.3-19.6,33.9-38,43.4-54.7
+			C222.6,371.2,227.4,360.8,217.5,357.5z"/>
+	</g>
+	<g class="patch-color-strokes">
+		<path class="r1" d="M247.5,189.6c5.8,18.6,4.8,31.2,4.8,31.2s4.9-12.6,21.2-26.8c10-8.8,22.5-12.1,35.1-9.3
+			c6.5,1.5,12.6,4.6,17.7,8.8c-1.8-0.2-3.6-0.3-5.4-0.3c-9.1,0-18.3,2.5-26.9,7.5c0,0,0,0,0,0c-16.1,9.4-23.8,34.7-31.9,61.4
+			c-8.7,28.3-17.6,57.6-35.9,67.4c-0.5-1.5-1.2-3.2-1.9-5.1c-7.7-19.9-1.2-45.5,5.2-70.1c5.7-22.2,11.1-43.2,6.1-60
+			c-4.5-14.8-13.8-26-26.4-31.6c9,0.1,17.8,2.8,25,8C240.6,175.3,245,181.7,247.5,189.6z"/>
+
+		<path class="r1" d="M280.1,130.1c-19.7-4.1-38.8,5.2-42.1,18c7.1,5.2,26.1,6.5,24.1,34.4c10.9-25.7,38-19.7,50-16.4
+			C312.2,154.5,301.3,134.5,280.1,130.1z"/>
+
+		<path class="r1" d="M238.8,362c32.7,15.5,62.6-80.6,76.6-101.9c14.8-22.4,29.2-15.9,42.6-6.4c13.3,9.5,16.7,27.4,16.7,27.4
+			c10.8-25.6-1.1-50.6-21-61.4c-13.2-7.2-29.8-8.1-45.5,1.1c-30.4,18-29.6,110.5-69.4,129.6C238.8,350.2,230.9,358.2,238.8,362z"/>
+
+		<path class="r1" d="M202.2,335.7c-15.6-40,22.6-97.4,12.4-130.6c-8.5-28.2-34.6-37-55-27.2c-10.7,5.1-19.7,15.3-24,30.4
+			c0,0,12.4-11.5,26.8-10.1c14.3,1.3,27.8,5.7,24.7,32.3c-2.8,24.6-23,107,5.1,120c1.6,0.7,3.3,1.2,5.2,1.5c0,0-5.7,1.4,0,0
+			S202.2,335.7,202.2,335.7z"/>
+
+		<path class="g2" d="M229.1,121c9.6-4.1,20.5-32.8,20.5-59.6c0-21.4-8.4-36-20.5-45.9c-11.3,7.1-24.8,21.6-24.7,45.9
+			C204.4,90.5,218.6,121,229.1,121L229.1,121L229.1,121z"/>
+
+		<path class="g2" d="M339.9,149.9c8.1,8,38.8,5.2,64.9-5.6c20.5-8.7,31.2-23.1,35.5-39.2c-11.7-8.5-31.5-16.1-54.8-6.4
+			C357.1,110.4,335.3,139,339.9,149.9L339.9,149.9z"/>
+
+		<path class="g2" d="M222.5,412.4c3.5,11.6,33,24.5,62.2,27.2c23.3,2.2,40.1-6.2,52-19.4c-6.5-14-20.9-31.3-47.1-33.7
+			C257.9,383.6,223.4,399.8,222.5,412.4L222.5,412.4z"/>
+
+		<path class="g1" d="M217.5,357.5c-10-3.3-16.5,25.7-58.6,68.2c-42.8,43.3-95.9,56-96.5,56.1c-3.9,0.9-6.7,4.2-7,8.3
+			c-0.1,1,0,1.9,0.1,2.8c1,4.2,4.8,7,8.9,7c0.7,0,1.3-0.1,2-0.3c2.3-0.6,58.6-13.9,105.4-61.1c19.3-19.6,33.9-38,43.4-54.7
+			C222.6,371.2,227.4,360.8,217.5,357.5z"/>
+	</g>
+</svg>
